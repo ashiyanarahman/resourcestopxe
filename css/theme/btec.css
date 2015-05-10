@@ -1,0 +1,153 @@
+@import url("btec/header/header.css");
+@import url("btec/common/common.css");
+@import url("btec/article/asidesection.css");
+@import url("btec/article/bodysection.css");
+@import url("btec/footer/footer.css");
+@media (min-width: 700px), handheld and (orientation: landscape) { }
+@media (min-width: 400px), handheld and (orientation: portrait) { }
+@media only screen and (min-device-width: 640px) and
+(max-device-width: 1136px) and
+(-webkit-min-device-pixel-ratio: 2) {
+    /* iPhone 5 only – at least for now */
+}
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+    /*@page {*/
+        /*size: A4 portrait; *//* can use also 'landscape' for orientation */
+        /*margin-top: 3.0in;*/
+        /*margin-bottom: 1.0in;*/
+
+        /*@bottom-center {*/
+            /*content: element(footer);*/
+        /*}*/
+
+        /*@top-center {*/
+            /*content: element(header);*/
+        /*}*/
+    /*}*/
+
+}
+
+/*html5 semantics tags */
+article, aside, figure, footer, header, hgroup, menu, nav, section
+{ display: block; }
+
+/* Clear Floated Elements */
+.clearfix:before, .clearfix:after {content: "\0020";
+    display: block; height: 0; visibility: hidden;}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    color: #000000;
+    /*padding: 0 20px;*/
+    /*border-color: #ffffff;*/
+    /*border-top: 5px solid #ffffff;*/
+    /*border-left: 5px solid #ffffff;*/
+    /*border-right: 5px solid #ffffff;*/
+    /*border-bottom: 5px solid #ffffff;*/
+    margin: 0;
+    /*width: 794px;*/
+    /*height: 1190px;*/
+    /*border: 1px solid #ffff00;*/
+
+    width: 21cm;
+    /*height: 29.7cm;*/
+    /*height: 100%;*/
+    marks: crop cross;
+
+    /*padding: 2cm;*/
+    /*margin: 1cm auto;*/
+    /*border: 1px #D3D3D3 solid;*/
+    /*border-radius: 5px;*/
+    /*background: #d7ece8;*/
+    /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);*/
+}
+
+
+/* Debug Show lines */
+aside {
+    margin: 0;
+    padding: 0;
+    position: relative;
+/*    border: 1px dashed blue;*/
+    height: 100%;
+}
+
+/*
+section {
+    min-height: 100%;
+    position: relative;
+    border: 1px dashed red;
+}
+*/
+
+/*article {
+    border: 1px dashed green;
+}
+
+figure {
+    border: 1px dashed orange;
+}
+
+body > header .number,
+body > header .label,
+body > header .title {
+    border: 1px dashed red;
+}*/
+
+/* End debug Show lines */
+
+article {
+    margin-top: 1em;
+}
+
+article.normal-text {
+    margin-top: 0.5em;
+}
+
+/* Articles */
+
+aside, blockquote, figure, header, iframe,
+nav, object, pre, section, table {
+    page-break-inside: avoid;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+}
+
+p {
+    orphans: 2;
+    widows: 2;
+}
